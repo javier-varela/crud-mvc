@@ -12,4 +12,9 @@ class Category extends Model
     protected $fillable = ['id', 'title', 'slug'];
 
     public $timestamps = false;
+
+    function post()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
